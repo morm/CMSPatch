@@ -42,16 +42,16 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD dwReason, LPVOID lpReserved)
 {
 	switch (dwReason)
 	{
-	case DLL_PROCESS_ATTACH:
+		case DLL_PROCESS_ATTACH:
 		{
 			pBridgeBuffer = (BYTE *) VirtualAlloc(NULL, MAX_HOOKS * (JUMP_WORST * 3),
 				MEM_COMMIT, PAGE_EXECUTE_READWRITE);
 		}
 
-	case DLL_THREAD_ATTACH:
-	case DLL_THREAD_DETACH:
-	case DLL_PROCESS_DETACH:
-		break;
+		case DLL_THREAD_ATTACH:
+		case DLL_THREAD_DETACH:
+		case DLL_PROCESS_DETACH:
+			break;
 	}
 
 	return TRUE;

@@ -1,0 +1,3 @@
+LIBRARY injector
+EXPORTS
+Init @1

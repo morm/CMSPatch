@@ -18,10 +18,7 @@
 extern "C"
 {
 #endif
-
-int DLL_EXPORT MyMsgBox(HWND hwnd, LPCWSTR text, LPCWSTR caption, UINT flags);
-int DLL_EXPORT GetMessageBoxW(void *p);
-
+	void DLL_EXPORT Init();
 #ifdef __cplusplus
 }
 #endif
